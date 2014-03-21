@@ -11,6 +11,8 @@ This plugin has been been sandboxed within the TeamForgeConnector folder. All co
 TO use this plugin you will need to do the following:
 
 1) Set up your Teamforge Import ID on pages/CreateDefect.php
+
 $login_array['userName'] = 'TeamForgeUserId';
+
 $login_array['possword'] = 'TeamforgePassword';
 
