@@ -16,6 +16,10 @@ $login_array['userName'] = 'TeamForgeUserId';
 
 $login_array['possword'] = 'TeamforgePassword';
 
+$loginWSDL = "http://PathToTeamForgeInstalledAPI";
+
+$trackerWSDL = "http://PathToTeamForgeInstalledAPI";
+
 2) Go to Mantis Plugin page and install TeamForgePlugin.
 
 3) Configure it by adding approriate Projects, Artifacts, and Fields.
