@@ -1,0 +1,116 @@
+
+
+div.ConfigBody {
+	@import 'bootstrap';
+	@import 'bourbon/bourbon';
+
+
+
+/*
+#projectlistUL  .ui-selecting { background: #FECA40; }
+#projectlistUL .ui-selected { background: #F39814; color: white; }
+#projectlistUL 	{ list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#projectlistUL	li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+
+#catlistUL  .ui-selecting { background: #FECA40; }
+#catlistUL .ui-selected { background: #F39814; color: white; }
+#catlistUL 	{ list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#catlistUL	li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+
+#custFieldListUL  .ui-selecting { background: #FECA40; }
+#custFieldListUL .ui-selected { background: #F39814; color: white; }
+#custFieldListUL 	{ list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#custFieldListUL	li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+
+*/
+
+	// Variables
+	$light-grey: #f5f5f5;
+	$med-grey: darken($light-grey, 5%);
+	$dark-grey: darken($med-grey, 5%);
+
+	$light-green: #81BF25;
+	$med-green: #5DB52C;
+	$dark-green: darken($med-green, 5%);
+
+	// MIXINS
+	@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+      -webkit-box-shadow:$top $left $blur $color #{$inset};
+      -moz-box-shadow:$top $left $blur $color #{$inset};
+      box-shadow:$top $left $blur $color #{$inset};
+    }
+
+
+
+
+	.ProjectListDiv, .CatListDiv, .FieldsDiv {
+		border: 1px solid darken($light-grey, 10%);
+		background: $light-grey;
+		padding: 10px;
+		overflow: auto;
+
+		.ui-selectable {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			// selected states
+			.ui-state-default {
+				padding: 20px;
+				@include linear-gradient(to , $light-grey, $med-grey);
+				@include box-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.075), inset);
+				 
+				-webkit-transition: background 1s ease-out;  
+			    -moz-transition: background 1s ease-out;  
+			    -o-transition: background 1s ease-out;  
+			    transition: background 1s ease-out;  
+
+			    background-size:1px 200px; 
+			    cursor: pointer;
+
+				&:hover {
+					background-position:100px;  
+					
+				}
+
+
+			}
+			.ui-selected {
+				@include linear-gradient(to , rgba($light-green, 0.50), rgba($med-green, 0.50));
+			}
+			
+
+
+		} // END ui-selectable
+
+		.field-actions {
+			margin: 10px 0;
+
+			input[type="text"] {
+				height: 40px;
+				width: 170px;
+				margin-right: 5px;
+				padding-left: 5px;
+				border-radius: 4px;
+
+				&#InputProjectName,#InputCatName,#InputFieldName {
+					width: 180px;
+				}
+				&#InputProjectId,#InputCatId,#InputFieldId {
+					width: 80px;
+				}
+
+			}
+
+			.btn {
+				height: 40px;
+				width: 100px;
+			}
+
+		}
+
+	}
+
+
+} // END div.ConfigBody
+
