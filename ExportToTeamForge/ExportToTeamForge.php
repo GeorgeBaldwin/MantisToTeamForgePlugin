@@ -26,8 +26,7 @@ class ExportToTeamForgePlugin extends MantisPlugin {
 			'process_text'		=> ON,
 			'process_urls'		=> ON,
 			'process_buglinks'	=> ON,
-			'process_vcslinks'	=> ON,
-		);
+			
 	}
 	
 	
